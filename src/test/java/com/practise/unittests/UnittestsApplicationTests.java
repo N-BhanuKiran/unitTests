@@ -2,6 +2,7 @@ package com.practise.unittests;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -31,5 +32,18 @@ class UnittestsApplicationTests {
 		}
 		assertThat(users.size()).isGreaterThan(0);
 	}
-
+	@Test
+	void testDateConvertions() {
+		String dateString = "2011-12-03";
+		LocalDate date = LocalDate.parse(dateString);
+		LocalDate today = LocalDate.now();
+		if(date.isAfter(today)) {
+			System.out.println(date);
+		} else {
+			System.out.println(today);
+		}
+		assertThat(date).isNotNull();
+		assertThat(date.isBefore(today)).isTrue();
+	}
 }
+
