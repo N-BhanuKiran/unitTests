@@ -3,6 +3,7 @@ package com.practise.unittests;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+// class comment
 @SpringBootApplication
 public class UnittestsApplication {
 
